@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import '../globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import WhatsAppChat from '@/components/layout/WhatsAppChat'
+import ClientArea from '@/components/layout/ClientArea'
 import { locales, defaultLocale, isValidLocale, type Locale } from '@/lib/i18n'
 import { getTranslations } from '@/lib/get-translations'
 import { notFound } from 'next/navigation'
@@ -68,11 +70,13 @@ export default async function RootLayout({
   return (
     <html lang={locale} className={inter.variable}>
       <body className="min-h-screen flex flex-col">
+        <ClientArea locale={locale} translations={translations} />
         <Header locale={locale} translations={translations} />
         <main className="flex-grow">
           {children}
         </main>
         <Footer locale={locale} translations={translations} />
+        <WhatsAppChat />
       </body>
     </html>
   )
