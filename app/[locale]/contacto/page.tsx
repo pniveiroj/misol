@@ -27,7 +27,7 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/9.png"
+            src="/images/jpg/9.jpg"
             alt="Contacto"
             fill
             className="object-cover"
@@ -64,7 +64,7 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
               {/* Image */}
               <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl mb-8">
                 <Image
-                  src="/images/7.png"
+                  src="/images/jpg/7.jpg"
                   alt={localeParam === 'es' ? 'Oficinas' : localeParam === 'val' ? 'Oficines' : 'Offices'}
                   fill
                   className="object-cover"
@@ -173,7 +173,7 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
       <section className="relative py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/8.png"
+            src="/images/jpg/8.jpg"
             alt=""
             fill
             className="object-cover opacity-20"

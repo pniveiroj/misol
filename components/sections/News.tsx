@@ -37,7 +37,7 @@ export default function News({ translations, locale }: { translations: Translati
               {/* Image */}
               <div className="relative h-64 md:h-full min-h-[300px]">
                 <Image
-                  src="/images/4.png"
+                  src="/images/jpg/4.jpg"
                   alt={translations.news.item1.title}
                   fill
                   className="object-cover"

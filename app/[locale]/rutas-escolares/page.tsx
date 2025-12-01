@@ -17,11 +17,11 @@ export default async function RutasEscolaresPage({ params }: { params: Promise<{
   const schools = [
     {
       name: t.schoolRoutes.school1,
-      image: '/images/escolar.png',
+      image: '/images/jpg/escolar.jpg',
     },
     {
       name: t.schoolRoutes.school2,
-      image: '/images/escolar.png',
+      image: '/images/jpg/escolar.jpg',
     },
   ]
 
@@ -49,7 +49,7 @@ export default async function RutasEscolaresPage({ params }: { params: Promise<{
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/escolar.png"
+            src="/images/jpg/escolar.jpg"
             alt="Rutas escolares"
             fill
             className="object-cover"
@@ -164,7 +164,7 @@ export default async function RutasEscolaresPage({ params }: { params: Promise<{
       <section className="relative py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/1.png"
+            src="/images/jpg/1.png"
             alt=""
             fill
             className="object-cover opacity-20"

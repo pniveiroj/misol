@@ -59,7 +59,7 @@ export default function About({ translations, locale }: { translations: Translat
               {/* Image */}
               <div className="relative h-80 rounded-2xl overflow-hidden shadow-2xl mb-8">
                 <Image
-                  src="/images/3.png?v=2"
+                  src="/images/jpg/3.jpg"
                   alt={locale === 'es' ? 'Nuestra empresa' : locale === 'val' ? 'La nostra empresa' : 'Our company'}
                   fill
                   className="object-cover"

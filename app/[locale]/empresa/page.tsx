@@ -43,7 +43,7 @@ export default async function EmpresaPage({ params }: { params: Promise<{ locale
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/2.png"
+            src="/images/jpg/2.jpg"
             alt="Nuestra empresa"
             fill
             className="object-cover"
@@ -104,7 +104,7 @@ export default async function EmpresaPage({ params }: { params: Promise<{ locale
               {/* Image */}
               <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/3.png?v=2"
+                  src="/images/jpg/3.jpg"
                   alt={localeParam === 'es' ? 'Nuestra empresa' : localeParam === 'val' ? 'La nostra empresa' : 'Our company'}
                   fill
                   className="object-cover"

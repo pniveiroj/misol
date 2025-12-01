@@ -24,7 +24,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
         t.services.companies.item3,
         t.services.companies.item4,
       ],
-      image: '/images/1.png',
+      image: '/images/jpg/1.png',
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
         t.services.custom.item5,
         t.services.custom.item6,
       ],
-      image: '/images/2.png',
+      image: '/images/jpg/2.jpg',
     },
     {
       icon: GraduationCap,
@@ -48,7 +48,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
         t.services.school.item3,
         t.services.school.item4,
       ],
-      image: '/images/escolar.png',
+      image: '/images/jpg/escolar.jpg',
     },
     {
       icon: Calendar,
@@ -61,7 +61,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
         t.services.events.item5,
         t.services.events.item6,
       ],
-      image: '/images/3.png?v=2',
+      image: '/images/jpg/3.jpg',
     },
   ]
 
@@ -71,7 +71,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/4.png"
+            src="/images/jpg/4.jpg"
             alt="Servicios"
             fill
             className="object-cover"
@@ -146,7 +146,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
       <section className="relative py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/5.png"
+            src="/images/jpg/5.jpg"
             alt=""
             fill
             className="object-cover opacity-20"

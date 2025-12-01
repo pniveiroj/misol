@@ -13,7 +13,7 @@ export default function Fleet({ translations, locale }: { translations: Translat
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/5.png"
+          src="/images/jpg/5.jpg"
           alt=""
           fill
           className="object-cover opacity-10"
@@ -33,7 +33,7 @@ export default function Fleet({ translations, locale }: { translations: Translat
             className="relative h-96 rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/images/6.png"
+              src="/images/jpg/6.jpg"
               alt={locale === 'es' ? 'Nuestra flota' : locale === 'val' ? 'La nostra flota' : 'Our fleet'}
               fill
               className="object-cover"

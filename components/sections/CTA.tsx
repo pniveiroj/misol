@@ -33,7 +33,7 @@ export default function CTA({ translations, locale }: { translations: Translatio
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/1.png"
+          src="/images/jpg/1.png"
           alt=""
           fill
           className="object-cover opacity-20"

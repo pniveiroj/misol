@@ -19,7 +19,7 @@ export default function Services({ translations, locale }: { translations: Trans
         translations.services.companies.item4,
       ],
       href: `/${locale}/servicios`,
-      image: '/images/1.png',
+      image: '/images/jpg/1.png',
     },
     {
       icon: Users,
@@ -33,7 +33,7 @@ export default function Services({ translations, locale }: { translations: Trans
         translations.services.custom.item6,
       ],
       href: `/${locale}/servicios`,
-      image: '/images/2.png',
+      image: '/images/jpg/2.jpg',
     },
     {
       icon: GraduationCap,
@@ -45,7 +45,7 @@ export default function Services({ translations, locale }: { translations: Trans
         translations.services.school.item4,
       ],
       href: `/${locale}/rutas-escolares`,
-      image: '/images/escolar.png',
+      image: '/images/jpg/escolar.jpg',
     },
     {
       icon: Calendar,
@@ -59,7 +59,7 @@ export default function Services({ translations, locale }: { translations: Trans
         translations.services.events.item6,
       ],
       href: `/${locale}/servicios`,
-      image: '/images/3.png?v=2',
+      image: '/images/jpg/3.jpg',
     },
   ]
 
