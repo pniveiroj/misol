@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { User, X, LogIn, Lock, Mail } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import type { Locale } from '@/lib/i18n'
 import type { Translations } from '@/lib/get-translations'
 
@@ -70,13 +69,9 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
   return (
     <>
       {/* Client Area Button */}
-      <div className="fixed top-6 right-6 z-50 hidden sm:block">
+      <div className="fixed top-6 right-6 z-[60]">
         {isLoggedIn ? (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="flex items-center space-x-3 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-200"
-          >
+          <div className="flex items-center space-x-3 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-200">
             <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
               <User className="w-5 h-5 text-white" />
             </div>
@@ -87,43 +82,33 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
             >
               {texts.logout}
             </button>
-          </motion.div>
+          </div>
         ) : (
-          <motion.button
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+          <button
             onClick={() => setIsOpen(!isOpen)}
             className="bg-white hover:bg-gray-50 text-primary-600 rounded-full px-4 py-2 shadow-lg border border-gray-200 transition-all duration-300 flex items-center space-x-2 group"
             aria-label={texts.title}
           >
             <User className="w-5 h-5" />
             <span className="text-sm font-medium">{texts.title}</span>
-          </motion.button>
+          </button>
         )}
       </div>
 
       {/* Login Modal */}
-      <AnimatePresence>
-        {isOpen && !isLoggedIn && (
-          <>
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/50 z-40"
-            />
+      {isOpen && !isLoggedIn && (
+        <>
+          {/* Backdrop */}
+          <div
+            onClick={() => setIsOpen(false)}
+            className="fixed inset-0 bg-black/50 z-[55]"
+          />
 
-            {/* Login Form */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
+          {/* Login Form */}
+          <div
+            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
               {/* Header */}
               <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
@@ -209,10 +194,9 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
                   </p>
                 </div>
               </form>
-            </motion.div>
+            </div>
           </>
         )}
-      </AnimatePresence>
     </>
   )
 }

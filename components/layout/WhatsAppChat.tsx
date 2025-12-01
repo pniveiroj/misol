@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { MessageCircle, X, Send } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 
 export default function WhatsAppChat() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,36 +17,22 @@ export default function WhatsAppChat() {
   return (
     <>
       {/* WhatsApp Button */}
-      <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 1, type: 'spring', stiffness: 200 }}
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group"
         aria-label="Abrir chat de WhatsApp"
       >
         <MessageCircle className="w-6 h-6" />
         {!isOpen && (
-          <motion.span
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap"
-          >
+          <span className="absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap">
             ¿Necesitas ayuda?
-          </motion.span>
+          </span>
         )}
-      </motion.button>
+      </button>
 
       {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200"
-          >
+      {isOpen && (
+        <div className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200">
             {/* Header */}
             <div className="bg-[#25D366] text-white p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
@@ -111,9 +96,8 @@ export default function WhatsAppChat() {
                 Respuesta automática • Normalmente respondemos en minutos
               </p>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </div>
+      )}
     </>
   )
 }

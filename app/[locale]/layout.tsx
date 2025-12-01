@@ -42,6 +42,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
               locale === 'val' ? 'autocars, transport, Elx, rutes escolars, viatges, grups' :
               'coaches, transport, Elche, school routes, trips, groups',
     authors: [{ name: 'Autocares Mi-Sol' }],
+    icons: {
+      icon: '/favicon.svg',
+      shortcut: '/favicon.svg',
+      apple: '/favicon.svg',
+    },
     openGraph: {
       title: titles[locale],
       description: descriptions[locale],
