@@ -109,6 +109,7 @@ export default async function EmpresaPage({ params }: { params: Promise<{ locale
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent"></div>
               </div>

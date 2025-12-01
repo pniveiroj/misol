@@ -109,6 +109,7 @@ export default function Services({ translations, locale }: { translations: Trans
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                         sizes="(max-width: 768px) 100vw, 50vw"
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-primary-800/40 to-transparent"></div>
                       <div className="absolute top-6 left-6">

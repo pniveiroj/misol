@@ -94,6 +94,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
             fill
             className="object-cover"
             sizes="100vw"
+            loading="lazy"
           />
         </div>
         
@@ -178,6 +179,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                     <div className="absolute top-6 right-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white px-5 py-2.5 rounded-xl font-bold text-lg shadow-2xl backdrop-blur-sm">
@@ -214,6 +216,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
             fill
             className="object-cover opacity-20"
             sizes="100vw"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/80"></div>
         </div>

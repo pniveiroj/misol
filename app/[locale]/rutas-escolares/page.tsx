@@ -126,6 +126,7 @@ export default async function RutasEscolaresPage({ params }: { params: Promise<{
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-700"
                       sizes="(max-width: 768px) 100vw, 50vw"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-primary-800/40 to-transparent"></div>
                     <div className="absolute top-6 left-6">
@@ -169,6 +170,7 @@ export default async function RutasEscolaresPage({ params }: { params: Promise<{
             fill
             className="object-cover opacity-20"
             sizes="100vw"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/80"></div>
         </div>

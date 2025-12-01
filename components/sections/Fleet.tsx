@@ -38,6 +38,7 @@ export default function Fleet({ translations, locale }: { translations: Translat
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent"></div>
           </motion.div>

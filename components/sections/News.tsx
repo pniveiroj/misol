@@ -42,6 +42,7 @@ export default function News({ translations, locale }: { translations: Translati
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
               </div>

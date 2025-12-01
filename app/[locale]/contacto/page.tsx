@@ -69,6 +69,7 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 to-transparent"></div>
               </div>
@@ -178,6 +179,7 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
             fill
             className="object-cover opacity-20"
             sizes="100vw"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/80 to-primary-800/80"></div>
         </div>
