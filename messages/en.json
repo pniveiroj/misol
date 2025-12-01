@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Home",
+    "company": "Our Company",
+    "policy": "Company Policy",
+    "services": "Services",
+    "schoolRoutes": "School Routes",
+    "fleet": "Fleet",
+    "contact": "Contact",
+    "location": "Location"
+  },
+  "home": {
+    "title": "Welcome to our website",
+    "subtitle": "In our online space, we offer you a wide selection of high-quality vehicles to cover any need you may have.",
+    "cta": "We have the tailor-made solution!",
+    "description": "Our good image is the result of many years of efficiency, reliability, quality and the best service. Visit our virtual gallery and find what you are looking for. Our staff will always be at your disposal to help you find the solution that best suits your needs.",
+    "callToAction": "Call us today and request your free quote."
+  },
+  "company": {
+    "title": "About Us",
+    "description1": "We are a family business, located in Elche (Alicante), dedicated to passenger transport since the 1940s. Our knowledge of the sector, quality of service and preferential treatment of customers are your guarantee of travel.",
+    "description2": "We are specialized in the sector, both in national and international travel. We have highly qualified staff and our vehicles are equipped with the most modern technologies, as well as all legally required safety systems, to ensure you travel with maximum comfort and confidence.",
+    "description3": "We are committed to providing you with our services with the highest possible quality, as proof of this, we have four quality certificates, which is possible thanks to the commitment and efficiency of all the workers in our company.",
+    "certificates": "Certificates",
+    "cert1": "Quality Management System according to UNE-EN ISO 9001 standard",
+    "cert2": "Environmental Management System according to UNE-EN ISO 14001 standard",
+    "cert3": "Public Passenger Transport according to UNE-EN 13816 standard",
+    "cert4": "Tourist Quality at Destination according to Sicted"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Autocares Mi-Sol, S.L. offers all types of services, adapted to the needs of each client",
+    "companies": {
+      "title": "Companies",
+      "item1": "Regular employee routes",
+      "item2": "Executive transfers",
+      "item3": "Meetings",
+      "item4": "Facility visits"
+    },
+    "custom": {
+      "title": "Custom trips",
+      "item1": "Sports Clubs: transfers, championships, training...",
+      "item2": "Associations",
+      "item3": "Ski trips",
+      "item4": "City visits",
+      "item5": "Thematic routes",
+      "item6": "Transfer: airports, hotels..."
+    },
+    "school": {
+      "title": "School transport",
+      "item1": "Regular routes",
+      "item2": "Excursions and visits",
+      "item3": "End of course trips, camps",
+      "item4": "Study trips"
+    },
+    "events": {
+      "title": "Events",
+      "item1": "Congresses and fairs",
+      "item2": "Conventions",
+      "item3": "Celebrations",
+      "item4": "Weddings",
+      "item5": "Farewells",
+      "item6": "Anniversaries"
+    }
+  },
+  "schoolRoutes": {
+    "title": "School Routes",
+    "subtitle": "Here you can consult the schedules and stops of our school routes.",
+    "school1": "Nuestra Señora del Carmen School",
+    "school2": "San Alberto Magno School"
+  },
+  "fleet": {
+    "title": "Fleet and Presentations",
+    "subtitle": "We have a fleet of coaches in constant renewal, to guarantee our customers the fulfillment of the most demanding standards of quality, safety and comfort.",
+    "description": "Coaches with capacity from 35 to 63 seats, with all the features you need to make your trip more pleasant: disabled access platform, satellite TV, coffee maker, footrests, individual auxiliary tables, armrests, power outlets, CD and USB player, individual radio player, game tables, lounges...in addition all our vehicles have seat belts in all seats.",
+    "wifi": "We have WIFI in our vehicles, travel with us and don't disconnect."
+  },
+  "contact": {
+    "title": "You can request your free quote",
+    "description": "You can contact us through the following form, by sending us an email to miralles@autocaresmisol.com, in person at our Central Offices located at Calle Juan de Herrera 15, Elche, Valencian Community, Monday to Friday from 9:30am to 2:00pm and from 4:30pm to 8:30pm. or by phone +34965680319",
+    "address": "Calle Juan de Herrera 15, Elche, Valencian Community",
+    "phone": "+34 965 68 03 19",
+    "email": "miralles@autocaresmisol.com",
+    "schedule": "Monday to Friday from 9:30am to 2:00pm and from 4:30pm to 8:30pm",
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent successfully! We will contact you soon.",
+      "error": "There was an error sending the message. Please try again or call us directly."
+    }
+  },
+  "location": {
+    "title": "Location",
+    "subtitle": "You can find us here"
+  },
+  "news": {
+    "title": "News",
+    "item1": {
+      "date": "March 14, 2022",
+      "title": "Elche buses that take Ukrainians on the path to peace",
+      "description": "A well-known Elche coach company, together with two NGOs, brings dozens of refugees to the province and to Valencia.",
+      "source": "INFORMATION DAILY"
+    }
+  },
+  "policy": {
+    "title": "Company Mission and Commitment Statement",
+    "subtitle": "The organization, through its Manager, has identified the following principles and commitments:",
+    "description": "Autocares MISOL S.L. is an organization dedicated to discretionary passenger transport by road, both nationally and internationally.",
+    "commitments": [
+      "Provide the client and society with a transport service in accordance with the client's requirements and compliance with current regulations in the places where the service is provided.",
+      "Offer a fleet of modern coaches in perfect maintenance condition.",
+      "Ensure passenger safety within a framework of comfort and excellent personal treatment, for which objectives are established to control and mitigate transport-related risks that may affect its workers and third parties, maintaining superior performance expressed in zero fatalities and zero serious injuries in traffic accidents.",
+      "Maintain an excellent corporate image through the clothing, personal appearance and professionalism of staff in contact with the client, as well as the cleanliness and functionality of the coach and its implicit complements.",
+      "Comply with punctuality, regularity and other requirements agreed with the service contractor.",
+      "Take care of material goods owned by the client that are deposited in our coaches.",
+      "Maintain a mutually beneficial collaboration with our suppliers and contractors.",
+      "Foster internal communication to involve professionals in commitments to continuous improvement in quality and environmental management.",
+      "Comply with all applicable legal requirements, as well as regulations on working hours and rest of its workers",
+      "Identify existing risks on the roads used, reporting them to the responsible authority.",
+      "Train drivers in responsible and safe driving conditions.",
+      "Participate in environmental protection by minimizing significant adverse environmental impacts generated by our activity, through prevention, continuous improvement and the establishment and review of environmental objectives and goals in our organizational system",
+      "Apply continuously and sustainably an integrated quality and environmental management system in accordance with ISO 9001, 14001, 13816 and 39001 standards in force."
+    ],
+    "footer": "AUTOCARES MI SOL S.L. will respect the quality commitments identified in its Service Charter, within the services included in the scope of implementation of the UNE-EN 13816:2003 standard.",
+    "date": "April 18, 2018"
+  }
+}
+

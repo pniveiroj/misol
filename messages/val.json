@@ -1,0 +1,133 @@
+{
+  "nav": {
+    "home": "Inici",
+    "company": "La Nostra Empresa",
+    "policy": "Política de l'Empresa",
+    "services": "Serveis",
+    "schoolRoutes": "Rutes Escolars",
+    "fleet": "Flota",
+    "contact": "Contacte",
+    "location": "Ubicació"
+  },
+  "home": {
+    "title": "Benvingut a la nostra pàgina web",
+    "subtitle": "En el nostre espai online, li oferim una àmplia selecció de vehicles d'alta qualitat, per cobrir qualsevol necessitat que ens plantegi.",
+    "cta": "Tenim la solució a mida!",
+    "description": "La nostra bona imatge és fruit de molts anys d'eficiència, fiabilitat, bona qualitat i el millor servei. Visiti la nostra galeria virtual i trobi el que està buscant. El nostre personal sempre estarà a la seva disposició per ajudar-lo a trobar la solució que millor s'adapti a les seves necessitats.",
+    "callToAction": "Truqui-nos avui mateix i sol·liciti el seu pressupost sense compromís."
+  },
+  "company": {
+    "title": "Sobre Nosaltres",
+    "description1": "Som una empresa de caràcter familiar, ubicada a Elx (Alacant), dedicada al transport de viatgers des de la dècada dels 40. El nostre coneixement del sector, la qualitat en el servei i el tracte preferencial al client són la seva garantia de viatge.",
+    "description2": "Estem especialitzats en el sector, tant en viatges a nivell nacional com internacional. Comptem amb personal altament qualificat i els nostres vehicles estan dotats de les més modernes tecnologies, així com de tots els sistemes exigits legalment en seguretat, per aconseguir que vostè viatgi amb el màxim confort i confiança.",
+    "description3": "Ens comprometem a prestar-li els nostres serveis amb la major qualitat possible, com a mostra d'això, comptem amb quatre certificats de qualitat, cosa que és possible gràcies al compromís i l'eficiència de tots els treballadors de la nostra empresa.",
+    "certificates": "Certificats",
+    "cert1": "Sistema de Gestió de la Qualitat segons la norma UNE-EN ISO 9001",
+    "cert2": "Sistema de Gestió Ambiental segons la norma UNE-EN ISO 14001",
+    "cert3": "Transport Públic de Passatgers segons la norma UNE-EN 13816",
+    "cert4": "Qualitat Turística en Destí segons el Sicted"
+  },
+  "services": {
+    "title": "Serveis",
+    "subtitle": "Autocars Mi-Sol, S.L. ofereix tot tipus de serveis, adaptats a les necessitats de cada client",
+    "companies": {
+      "title": "Empreses",
+      "item1": "Rutes regulars d'empleats",
+      "item2": "Trasllat de directius",
+      "item3": "Reunions",
+      "item4": "Visites a instal·lacions"
+    },
+    "custom": {
+      "title": "Viatges a mida",
+      "item1": "Clubs Esportius: trasllats, campionats, entrenaments...",
+      "item2": "Associacions",
+      "item3": "Viatges d'esquí",
+      "item4": "Visites a ciutats",
+      "item5": "Rutes temàtiques",
+      "item6": "Transfer: aeroports, hotels..."
+    },
+    "school": {
+      "title": "Transport escolar",
+      "item1": "Rutes regulars",
+      "item2": "Excursions i visites",
+      "item3": "Viatges de fi de curs, campaments",
+      "item4": "Viatges d'estudis"
+    },
+    "events": {
+      "title": "Esdeveniments",
+      "item1": "Congressos i fires",
+      "item2": "Convencions",
+      "item3": "Celebracions",
+      "item4": "Bodes",
+      "item5": "Comiats",
+      "item6": "Aniversaris"
+    }
+  },
+  "schoolRoutes": {
+    "title": "Rutes Escolars",
+    "subtitle": "Aquí podràs consultar els horaris i les parades de les nostres rutes escolars.",
+    "school1": "Col·legi Nuestra Señora del Carmen",
+    "school2": "Col·legi San Alberto Magno"
+  },
+  "fleet": {
+    "title": "Flota i Presentacions",
+    "subtitle": "Disposem d'una flota d'autocars en constant renovació, per garantir als nostres clients el compliment dels més exigents estàndards de qualitat, seguretat i confort.",
+    "description": "Autocars amb capacitat des de 35 fins a 63 places, amb totes les prestacions que vostè necessiti per fer el seu viatge més plaent: plataforma d'accés a minusvàlids, TV via satèl·lit, cafetera, reposa-peus, taules auxiliars individuals, reposa-braços, preses de corrent, reproductor de CDs i USB, reproductor de ràdio individual, taules de joc, salons...a més tots els nostres vehicles compten amb cinturons de seguretat en totes les butaques.",
+    "wifi": "Comptem amb WIFI als nostres vehicles, viatgi amb nosaltres i no es desconnecti."
+  },
+  "contact": {
+    "title": "Pots sol·licitar el teu pressupost sense compromís",
+    "description": "Pot posar-se en contacte amb nosaltres a través del següent formulari, enviant-nos un e-mail a miralles@autocaresmisol.com, personalment a les nostres Oficines Centrals situades Carrer Juan de Herrera 15, Elx, Comunitat Valenciana, de dilluns a divendres de 9:30h a 14:00h i de 16:30h a 20:30h. o al nostre telèfon +34965680319",
+    "address": "Carrer Juan de Herrera 15, Elx, Comunitat Valenciana",
+    "phone": "+34 965 68 03 19",
+    "email": "miralles@autocaresmisol.com",
+    "schedule": "Dilluns a divendres de 9:30h a 14:00h i de 16:30h a 20:30h",
+    "form": {
+      "name": "Nom Complet",
+      "email": "Email",
+      "phone": "Telèfon",
+      "subject": "Assumpte",
+      "message": "Missatge",
+      "send": "Enviar Missatge",
+      "sending": "Enviant...",
+      "success": "Missatge enviat correctament! Ens posarem en contacte amb vostè aviat.",
+      "error": "Hi ha hagut un error en enviar el missatge. Si us plau, intenti-ho de nou o truqui'ns directament."
+    }
+  },
+  "location": {
+    "title": "Ubicació",
+    "subtitle": "Ens podràs trobar aquí"
+  },
+  "news": {
+    "title": "Notícies",
+    "item1": {
+      "date": "14 de Març 2022",
+      "title": "Autobusos d'Elx que porten als ucraïnesos camí de la pau",
+      "description": "Una coneguda empresa il·licitana d'autocars, juntament amb dues ONGs, porta a diverses desenes de refugiats a la província i a València.",
+      "source": "DIARI INFORMACIÓ"
+    }
+  },
+  "policy": {
+    "title": "Missió de l'Empresa i Declaració de Compromisos",
+    "subtitle": "L'organització, a través del seu Gerent, ha identificat els següents principis i compromisos:",
+    "description": "L'empresa Autocars MISOL S.L. és una organització dedicada al transport discrecional de viatgers per carretera, tant a nivell nacional com internacional.",
+    "commitments": [
+      "Proporcionar al client i a la societat un servei de transport d'acord amb els requisits del client i al compliment de la normativa vigent als llocs de prestació del servei.",
+      "Oferir una flota d'autocars moderns i en perfecte estat de manteniment.",
+      "Velar per la seguretat del passatger dins d'un marc de la confortabilitat i excel·lent tracte personal per al qual s'estableixen objectius per controlar i mitigar els riscos associats al transport que puguin afectar als seus treballadors i a tercers, mantenint un desempat superior expressat en zero fatalitat i zero ferits greus en accidents de trànsit.",
+      "Mantenir una excel·lent imatge corporativa a través de la vestimenta, arranjament personal i professionalitat del personal en contacte amb el client, així com de l'estat de neteja i funcionalitat de l'autocar i dels seus complements implícits.",
+      "Complir amb la puntualitat, regularitat i altres requisits acordats amb qui contracta el servei.",
+      "Cuidar els béns materials propietat del client que siguin dipositats als nostres autocars.",
+      "Mantenir una col·laboració mútuament beneficiosa amb els nostres proveïdors i contractistes.",
+      "Fomentar la comunicació interna per fer partícip al professional en els compromisos de millora contínua en qualitat i gestió ambiental.",
+      "Complir tots els requisits legals aplicables, així com la normativa en matèria d'hores de treball i descans dels seus treballadors",
+      "Identificar els riscos existents a les vies utilitzades, informant d'això a l'autoritat responsable.",
+      "Capacitar als conductors en condicions de maneig responsable i segur.",
+      "Participar en la protecció del medi ambient minimitzant els impactes ambientals adversos significatius generats per la nostra activitat, a través de la prevenció, de la millora contínua i de l'establiment i revisió d'objectius i metes ambientals al nostre sistema organitzatiu",
+      "Aplicar de manera contínua i sostenible un sistema de gestió integrada de la qualitat i del medi ambient d'acord amb les normes ISO 9001, 14001, 13816 i 39001 en vigor."
+    ],
+    "footer": "AUTOCARS MI SOL S.L. respectarà els compromisos de qualitat identificats a la seva Carta de Serveis, dins dels serveis inclosos en l'abast d'implantació de la norma UNE-EN 13816:2003.",
+    "date": "18 d'abril de 2018"
+  }
+}
+
