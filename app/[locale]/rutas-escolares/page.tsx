@@ -165,7 +165,7 @@ export default async function RutasEscolaresPage({ params }: { params: Promise<{
       <section className="relative py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/jpg/1.jpg"
+            src="/images/jpg/1.png"
             alt=""
             fill
             className="object-cover opacity-20"

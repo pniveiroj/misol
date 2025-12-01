@@ -19,7 +19,7 @@ export default function Services({ translations, locale }: { translations: Trans
         translations.services.companies.item4,
       ],
       href: `/${locale}/servicios`,
-      image: '/images/jpg/1.jpg',
+      image: '/images/jpg/1.png',
     },
     {
       icon: Users,
