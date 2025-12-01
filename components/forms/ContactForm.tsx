@@ -90,8 +90,8 @@ export default function ContactForm({ translations, locale }: { translations: Tr
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 sm:space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
             {translations.contact.form.name} *
@@ -100,7 +100,7 @@ export default function ContactForm({ translations, locale }: { translations: Tr
             type="text"
             id="name"
             {...register('name')}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-base min-h-[44px]"
             placeholder={translations.contact.form.name}
           />
           {formErrors.name && (
@@ -116,7 +116,7 @@ export default function ContactForm({ translations, locale }: { translations: Tr
             type="email"
             id="email"
             {...register('email')}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-base min-h-[44px]"
             placeholder={translations.contact.form.email}
           />
           {formErrors.email && (
@@ -133,7 +133,7 @@ export default function ContactForm({ translations, locale }: { translations: Tr
           type="tel"
           id="phone"
           {...register('phone')}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-base min-h-[44px]"
           placeholder={translations.contact.form.phone}
         />
         {formErrors.phone && (
@@ -149,7 +149,7 @@ export default function ContactForm({ translations, locale }: { translations: Tr
           type="text"
           id="subject"
           {...register('subject')}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all text-base min-h-[44px]"
           placeholder={translations.contact.form.subject}
         />
         {formErrors.subject && (
@@ -165,7 +165,7 @@ export default function ContactForm({ translations, locale }: { translations: Tr
           id="message"
           {...register('message')}
           rows={6}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none"
+          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none text-base"
           placeholder={translations.contact.form.message}
         />
         {formErrors.message && (
@@ -188,7 +188,7 @@ export default function ContactForm({ translations, locale }: { translations: Tr
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
+        className="w-full bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2 min-h-[48px]"
       >
         {isSubmitting ? (
           <>

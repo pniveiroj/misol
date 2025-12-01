@@ -29,11 +29,11 @@ export default function LanguageSelector({ currentLocale }: { currentLocale: Loc
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors"
+        className="flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 py-2 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors min-h-[44px] min-w-[44px] sm:min-w-auto"
         aria-label="Seleccionar idioma"
       >
-        <Globe className="w-5 h-5 text-gray-700" />
-        <span className="text-sm font-medium text-gray-700">
+        <Globe className="w-4 h-4 sm:w-5 sm:h-5 text-gray-700 flex-shrink-0" />
+        <span className="text-xs sm:text-sm font-medium text-gray-700 hidden sm:inline">
           {languageNames[currentLocale]}
         </span>
       </button>
@@ -49,7 +49,7 @@ export default function LanguageSelector({ currentLocale }: { currentLocale: Loc
               <button
                 key={locale}
                 onClick={() => changeLanguage(locale)}
-                className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-100 transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                className={`w-full text-left px-4 py-3 text-sm sm:text-base hover:bg-gray-100 active:bg-gray-200 transition-colors first:rounded-t-lg last:rounded-b-lg min-h-[44px] flex items-center ${
                   locale === currentLocale
                     ? 'bg-primary-50 text-primary-600 font-semibold'
                     : 'text-gray-700'

@@ -19,12 +19,12 @@ export default function WhatsAppChat() {
       {/* WhatsApp Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group"
+        className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1DA851] text-white rounded-full p-4 sm:p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group min-w-[56px] min-h-[56px]"
         aria-label="Abrir chat de WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
         {!isOpen && (
-          <span className="absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap">
+          <span className="hidden sm:block absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap">
             ¿Necesitas ayuda?
           </span>
         )}
@@ -32,7 +32,7 @@ export default function WhatsAppChat() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200">
+        <div className="fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-80 h-[calc(100vh-6rem)] sm:h-96 max-h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200">
             {/* Header */}
             <div className="bg-[#25D366] text-white p-4 flex items-center justify-between">
               <div className="flex items-center space-x-3">
@@ -74,7 +74,7 @@ export default function WhatsAppChat() {
             </div>
 
             {/* Input Area */}
-            <div className="p-4 bg-white border-t border-gray-200">
+            <div className="p-3 sm:p-4 bg-white border-t border-gray-200">
               <div className="flex items-center space-x-2">
                 <input
                   type="text"
@@ -82,11 +82,11 @@ export default function WhatsAppChat() {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                   placeholder="Escribe tu mensaje..."
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:border-transparent text-sm"
+                  className="flex-1 px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:border-transparent text-base sm:text-sm min-h-[44px]"
                 />
                 <button
                   onClick={handleSend}
-                  className="bg-[#25D366] hover:bg-[#20BA5A] text-white p-2 rounded-lg transition-colors"
+                  className="bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1DA851] text-white p-3 sm:p-2 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
                   aria-label="Enviar mensaje"
                 >
                   <Send className="w-5 h-5" />

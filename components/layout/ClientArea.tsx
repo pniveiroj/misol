@@ -69,16 +69,16 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
   return (
     <>
       {/* Client Area Button */}
-      <div className="fixed top-6 right-6 z-[60]">
+      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[60]">
         {isLoggedIn ? (
-          <div className="flex items-center space-x-3 bg-white rounded-full px-4 py-2 shadow-lg border border-gray-200">
-            <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center">
-              <User className="w-5 h-5 text-white" />
+          <div className="flex items-center space-x-2 sm:space-x-3 bg-white rounded-full px-3 sm:px-4 py-2 shadow-lg border border-gray-200">
+            <div className="w-8 h-8 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
+              <User className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
             </div>
-            <span className="text-sm font-medium text-gray-700">{texts.welcome}</span>
+            <span className="text-xs sm:text-sm font-medium text-gray-700 hidden sm:inline">{texts.welcome}</span>
             <button
               onClick={handleLogout}
-              className="text-sm text-primary-600 hover:text-primary-700 font-medium"
+              className="text-xs sm:text-sm text-primary-600 hover:text-primary-700 active:text-primary-800 font-medium px-2 py-1 min-h-[32px]"
             >
               {texts.logout}
             </button>
@@ -86,11 +86,11 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
         ) : (
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-white hover:bg-gray-50 text-primary-600 rounded-full px-4 py-2 shadow-lg border border-gray-200 transition-all duration-300 flex items-center space-x-2 group"
+            className="bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-full px-3 sm:px-4 py-2 shadow-lg border border-gray-200 transition-all duration-300 flex items-center space-x-2 group min-h-[44px]"
             aria-label={texts.title}
           >
-            <User className="w-5 h-5" />
-            <span className="text-sm font-medium">{texts.title}</span>
+            <User className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+            <span className="text-xs sm:text-sm font-medium hidden sm:inline">{texts.title}</span>
           </button>
         )}
       </div>
@@ -106,11 +106,11 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
 
           {/* Login Form */}
           <div
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden"
+            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[60] w-[calc(100vw-2rem)] sm:w-full max-w-md max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
               {/* Header */}
-              <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-6 flex items-center justify-between">
+              <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4 sm:p-6 flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                     <Lock className="w-6 h-6" />
@@ -130,7 +130,7 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
               </div>
 
               {/* Form */}
-              <form onSubmit={handleLogin} className="p-6 space-y-4">
+              <form onSubmit={handleLogin} className="p-4 sm:p-6 space-y-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     {texts.email}
@@ -143,7 +143,7 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-base min-h-[44px]"
                       placeholder="tu@email.com"
                     />
                   </div>
@@ -161,7 +161,7 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-base min-h-[44px]"
                       placeholder="••••••••"
                     />
                   </div>
@@ -179,9 +179,9 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl"
+                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 active:from-primary-800 active:to-primary-900 text-white py-3 sm:py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl min-h-[48px] text-base"
                 >
-                  <LogIn className="w-5 h-5" />
+                  <LogIn className="w-5 h-5 flex-shrink-0" />
                   <span>{texts.login}</span>
                 </button>
 

@@ -23,11 +23,12 @@ export default function Header({ locale, translations }: { locale: Locale; trans
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold text-primary-600">
-              AUTOCARES <span className="text-secondary-500">MI-SOL</span>
+          <Link href="/" className="flex items-center space-x-2 min-w-0 flex-1 sm:flex-initial">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-600 truncate">
+              <span className="hidden xs:inline">AUTOCARES </span>
+              <span className="text-secondary-500">MI-SOL</span>
             </div>
           </Link>
 
@@ -59,10 +60,10 @@ export default function Header({ locale, translations }: { locale: Locale; trans
           </div>
 
           {/* Mobile: Language & Menu */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-2 ml-2">
             <LanguageSelector currentLocale={locale} />
             <button
-              className="p-2 rounded-md text-gray-700 hover:bg-gray-100"
+              className="p-3 rounded-md text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] flex items-center justify-center"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
@@ -81,12 +82,12 @@ export default function Header({ locale, translations }: { locale: Locale; trans
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-white border-t"
           >
-            <div className="container mx-auto px-4 py-4 space-y-3">
+            <div className="container mx-auto px-4 py-4 space-y-2">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block py-2 text-gray-700 hover:text-primary-600 transition-colors font-medium"
+                  className="block py-3 px-2 text-base text-gray-700 hover:text-primary-600 hover:bg-gray-50 active:bg-gray-100 rounded-lg transition-colors font-medium min-h-[44px] flex items-center"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
@@ -94,11 +95,11 @@ export default function Header({ locale, translations }: { locale: Locale; trans
               ))}
               <a
                 href="tel:+34965680319"
-                className="flex items-center space-x-2 py-3 px-4 bg-primary-50 rounded-lg text-primary-600 font-semibold hover:bg-primary-100 transition-colors"
+                className="flex items-center justify-center space-x-2 py-3 px-4 bg-primary-50 rounded-lg text-primary-600 font-semibold hover:bg-primary-100 active:bg-primary-200 transition-colors min-h-[44px] mt-2"
                 onClick={() => setIsOpen(false)}
               >
-                <Phone className="w-5 h-5" />
-                <span className="whitespace-nowrap">+34 965 68 03 19</span>
+                <Phone className="w-5 h-5 flex-shrink-0" />
+                <span className="whitespace-nowrap text-base">+34 965 68 03 19</span>
               </a>
             </div>
           </motion.nav>

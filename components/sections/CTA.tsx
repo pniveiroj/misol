@@ -29,7 +29,7 @@ export default function CTA({ translations, locale }: { translations: Translatio
   const text = ctaText[locale]
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
+    <section className="relative py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -51,23 +51,23 @@ export default function CTA({ translations, locale }: { translations: Translatio
           transition={{ duration: 0.6 }}
           className="max-w-5xl mx-auto text-center"
         >
-          <div className="flex items-center justify-center space-x-2 mb-6">
-            <Star className="w-6 h-6 text-secondary-400 fill-secondary-400" />
-            <Star className="w-6 h-6 text-secondary-400 fill-secondary-400" />
-            <Star className="w-6 h-6 text-secondary-400 fill-secondary-400" />
+          <div className="flex items-center justify-center space-x-2 mb-4 sm:mb-6">
+            <Star className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-400 fill-secondary-400" />
+            <Star className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-400 fill-secondary-400" />
+            <Star className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-400 fill-secondary-400" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-lg">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 drop-shadow-lg px-2">
             {text.title}
           </h2>
-          <p className="text-xl md:text-2xl text-gray-100 mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-8 sm:mb-12 max-w-3xl mx-auto drop-shadow-md leading-relaxed px-4">
             {text.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 sm:gap-6 px-4">
             <a
               href="tel:+34965680319"
-              className="group bg-secondary-500 hover:bg-secondary-600 text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center space-x-2 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 whitespace-nowrap"
+              className="group bg-secondary-500 hover:bg-secondary-600 active:bg-secondary-700 text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center space-x-2 shadow-2xl hover:shadow-3xl min-h-[48px]"
             >
               <Phone className="w-5 h-5 flex-shrink-0" />
               <span className="whitespace-nowrap">{translations.contact.phone}</span>
@@ -75,9 +75,9 @@ export default function CTA({ translations, locale }: { translations: Translatio
             
             <Link
               href={`/${locale}/contacto`}
-              className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-10 py-5 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center space-x-2 border-2 border-white/30 hover:border-white/50 shadow-xl"
+              className="group bg-white/10 hover:bg-white/20 active:bg-white/30 backdrop-blur-sm text-white px-6 sm:px-10 py-3 sm:py-5 rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center space-x-2 border-2 border-white/30 hover:border-white/50 shadow-xl min-h-[48px]"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5 flex-shrink-0" />
               <span>{text.button}</span>
             </Link>
           </div>
