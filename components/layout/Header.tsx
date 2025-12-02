@@ -23,9 +23,9 @@ export default function Header({ locale, translations }: { locale: Locale; trans
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20 w-full">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 min-w-0 flex-shrink">
+          <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
             <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-600">
               <span className="hidden sm:inline">AUTOCARES </span>
               <span className="text-secondary-500">MI-SOL</span>
@@ -33,7 +33,7 @@ export default function Header({ locale, translations }: { locale: Locale; trans
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 flex-1 justify-center">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -46,7 +46,7 @@ export default function Header({ locale, translations }: { locale: Locale; trans
           </nav>
 
           {/* Language Selector & Phone CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
             <LanguageSelector currentLocale={locale} />
             <a
               href="tel:+34965680319"
@@ -63,11 +63,17 @@ export default function Header({ locale, translations }: { locale: Locale; trans
           <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
             <LanguageSelector currentLocale={locale} />
             <button
-              className="p-2 rounded-md text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              type="button"
+              className="p-2.5 rounded-md text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] w-[44px] h-[44px] flex items-center justify-center border border-gray-300 bg-white shadow-sm"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
             >
-              {isOpen ? <X size={24} className="text-gray-700" /> : <Menu size={24} className="text-gray-700" />}
+              {isOpen ? (
+                <X size={24} className="text-gray-700" strokeWidth={2.5} />
+              ) : (
+                <Menu size={24} className="text-gray-700" strokeWidth={2.5} />
+              )}
             </button>
           </div>
         </div>
