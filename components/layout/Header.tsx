@@ -25,9 +25,9 @@ export default function Header({ locale, translations }: { locale: Locale; trans
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 min-w-0 flex-1 sm:flex-initial">
-            <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-600 truncate">
-              <span className="hidden xs:inline">AUTOCARES </span>
+          <Link href="/" className="flex items-center space-x-2 min-w-0 flex-shrink">
+            <div className="text-lg sm:text-xl md:text-2xl font-bold text-primary-600">
+              <span className="hidden sm:inline">AUTOCARES </span>
               <span className="text-secondary-500">MI-SOL</span>
             </div>
           </Link>
@@ -60,14 +60,14 @@ export default function Header({ locale, translations }: { locale: Locale; trans
           </div>
 
           {/* Mobile: Language & Menu */}
-          <div className="md:hidden flex items-center space-x-2 ml-2">
+          <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
             <LanguageSelector currentLocale={locale} />
             <button
-              className="p-3 rounded-md text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] flex items-center justify-center"
+              className="p-2 rounded-md text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] flex items-center justify-center"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={24} className="text-gray-700" /> : <Menu size={24} className="text-gray-700" />}
             </button>
           </div>
         </div>
