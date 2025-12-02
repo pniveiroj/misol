@@ -16,9 +16,10 @@ export default function Hero({ translations, locale }: { translations: Translati
           src="/images/jpg/1.jpg"
           alt="Autocares Mi-Sol"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
           sizes="100vw"
+          quality={85}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/85 via-primary-800/80 to-primary-900/85"></div>
       </div>

@@ -30,9 +30,10 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
             src="/images/jpg/9.jpg"
             alt="Contacto"
             fill
-            className="object-cover"
+            className="object-cover object-center"
             priority
             sizes="100vw"
+            quality={85}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/85 to-primary-900/90"></div>
         </div>
