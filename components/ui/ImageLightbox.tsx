@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 
@@ -13,6 +13,14 @@ interface ImageLightboxProps {
 
 export default function ImageLightbox({ images, alt, initialIndex = 0, onClose }: ImageLightboxProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex)
+
+  const handlePrevious = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+  }, [images.length])
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+  }, [images.length])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -32,18 +40,20 @@ export default function ImageLightbox({ images, alt, initialIndex = 0, onClose }
       document.removeEventListener('keydown', handleKeyDown)
       document.body.style.overflow = 'unset'
     }
-  }, [currentIndex])
+  }, [onClose, handlePrevious, handleNext])
 
-  const handlePrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+  // Cerrar al hacer click en el fondo (fuera de la imagen)
+  const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (e.target === e.currentTarget) {
+      onClose()
+    }
   }
 
   return (
-    <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center">
+    <div 
+      className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+      onClick={handleBackdropClick}
+    >
       {/* Close Button */}
       <button
         onClick={onClose}
@@ -65,7 +75,10 @@ export default function ImageLightbox({ images, alt, initialIndex = 0, onClose }
       )}
 
       {/* Image */}
-      <div className="relative w-full h-full flex items-center justify-center p-4">
+      <div 
+        className="relative w-full h-full flex items-center justify-center p-4"
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className="relative w-full max-w-7xl h-full max-h-[90vh]">
           <Image
             src={images[currentIndex]}
