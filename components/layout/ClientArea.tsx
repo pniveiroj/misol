@@ -68,7 +68,7 @@ export default function ClientArea({ locale, translations, inline = false }: Cli
   const texts = loginTexts[locale]
 
   const buttonClasses = inline 
-    ? "bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-lg h-[44px] px-4 border border-gray-200 transition-all duration-300 flex items-center justify-center space-x-2 group"
+    ? "bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-lg w-[44px] h-[44px] md:w-auto md:h-[44px] md:px-4 border border-gray-200 transition-all duration-300 flex items-center justify-center p-0 md:px-4 md:space-x-2 group"
     : "bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-full w-11 h-11 sm:w-auto sm:h-auto sm:px-4 sm:py-2 shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center sm:space-x-2 group min-h-[44px] min-w-[44px]"
 
   return (
@@ -95,7 +95,7 @@ export default function ClientArea({ locale, translations, inline = false }: Cli
             aria-label={texts.title}
           >
             <User className="w-5 h-5 flex-shrink-0" />
-            {inline && <span className="text-sm font-medium text-primary-600">{texts.title}</span>}
+            {inline && <span className="text-sm font-medium text-primary-600 hidden md:inline">{texts.title}</span>}
             {!inline && <span className="text-xs sm:text-sm font-medium hidden sm:inline">{texts.title}</span>}
           </button>
         )}

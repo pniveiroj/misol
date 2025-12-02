@@ -29,11 +29,11 @@ export default function LanguageSelector({ currentLocale }: { currentLocale: Loc
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors h-[44px] border border-gray-200 bg-white"
+        className="flex items-center justify-center w-[44px] h-[44px] md:w-auto md:h-[44px] p-0 md:px-3 md:py-2 rounded-lg hover:bg-gray-100 active:bg-gray-200 transition-colors border border-gray-200 bg-white md:space-x-2"
         aria-label="Seleccionar idioma"
       >
         <Globe className="w-5 h-5 text-gray-700 flex-shrink-0" />
-        <span className="text-sm font-medium text-gray-700">
+        <span className="text-sm font-medium text-gray-700 hidden md:inline">
           {languageNames[currentLocale]}
         </span>
       </button>
