@@ -46,18 +46,19 @@ export default function Header({ locale, translations }: { locale: Locale; trans
             ))}
           </nav>
 
-          {/* Language Selector & Phone CTA */}
-          <div className="hidden lg:flex items-center space-x-4 flex-shrink-0">
+          {/* Language Selector, Phone CTA & Client Area */}
+          <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
             <LanguageSelector currentLocale={locale} />
             <a
               href="tel:+34965680319"
-              className="flex items-center space-x-2 bg-primary-50 hover:bg-primary-100 px-4 py-2 rounded-lg transition-colors group"
+              className="flex items-center space-x-2 bg-primary-50 hover:bg-primary-100 px-4 py-2 rounded-lg transition-colors group h-[44px]"
             >
-              <Phone className="w-5 h-5 text-primary-600 group-hover:text-primary-700" />
+              <Phone className="w-5 h-5 text-primary-600 group-hover:text-primary-700 flex-shrink-0" />
               <span className="text-primary-600 font-semibold whitespace-nowrap group-hover:text-primary-700">
                 +34 965 68 03 19
               </span>
             </a>
+            <ClientArea locale={locale} translations={translations} inline={true} />
           </div>
 
           {/* Mobile: Language, Client Area & Menu */}
