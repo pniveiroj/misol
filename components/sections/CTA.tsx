@@ -36,9 +36,10 @@ export default function CTA({ translations, locale }: { translations: Translatio
           src="/images/jpg/1.jpg"
           alt=""
           fill
-          className="object-cover opacity-20"
+          className="object-cover object-center opacity-20"
           sizes="100vw"
           loading="lazy"
+          quality={75}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/85 via-primary-800/80 to-primary-900/85"></div>
       </div>
