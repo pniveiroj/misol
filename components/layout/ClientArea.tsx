@@ -8,9 +8,10 @@ import type { Translations } from '@/lib/get-translations'
 interface ClientAreaProps {
   locale: Locale
   translations: Translations
+  inline?: boolean
 }
 
-export default function ClientArea({ locale, translations }: ClientAreaProps) {
+export default function ClientArea({ locale, translations, inline = false }: ClientAreaProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [email, setEmail] = useState('')
@@ -66,12 +67,16 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
 
   const texts = loginTexts[locale]
 
+  const buttonClasses = inline 
+    ? "bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-lg w-[44px] h-[44px] border border-gray-200 transition-all duration-300 flex items-center justify-center group"
+    : "bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-full w-11 h-11 sm:w-auto sm:h-auto sm:px-4 sm:py-2 shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center sm:space-x-2 group min-h-[44px] min-w-[44px]"
+
   return (
     <>
       {/* Client Area Button */}
-      <div className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[60]">
+      <div className={inline ? "relative" : "hidden md:block fixed top-4 right-4 sm:top-6 sm:right-6 z-[60]"}>
         {isLoggedIn ? (
-          <div className="flex items-center space-x-2 sm:space-x-3 bg-white rounded-full px-3 sm:px-4 py-2 shadow-lg border border-gray-200">
+          <div className={`flex items-center space-x-2 sm:space-x-3 bg-white ${inline ? 'rounded-lg' : 'rounded-full'} px-3 sm:px-4 py-2 ${inline ? '' : 'shadow-lg'} border border-gray-200`}>
             <div className="w-9 h-9 sm:w-10 sm:h-10 bg-primary-600 rounded-full flex items-center justify-center flex-shrink-0">
               <User className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
@@ -86,11 +91,11 @@ export default function ClientArea({ locale, translations }: ClientAreaProps) {
         ) : (
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="bg-white hover:bg-gray-50 active:bg-gray-100 text-primary-600 rounded-full w-11 h-11 sm:w-auto sm:h-auto sm:px-4 sm:py-2 shadow-lg border border-gray-200 transition-all duration-300 flex items-center justify-center sm:space-x-2 group min-h-[44px] min-w-[44px]"
+            className={buttonClasses}
             aria-label={texts.title}
           >
-            <User className="w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
-            <span className="text-xs sm:text-sm font-medium hidden sm:inline">{texts.title}</span>
+            <User className={`${inline ? 'w-5 h-5' : 'w-5 h-5 sm:w-6 sm:h-6'} flex-shrink-0`} />
+            {!inline && <span className="text-xs sm:text-sm font-medium hidden sm:inline">{texts.title}</span>}
           </button>
         )}
       </div>

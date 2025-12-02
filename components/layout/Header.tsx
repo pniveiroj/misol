@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { Menu, X, Phone } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import LanguageSelector from './LanguageSelector'
+import ClientArea from './ClientArea'
 import type { Locale } from '@/lib/i18n'
 import type { Translations } from '@/lib/get-translations'
 
@@ -59,12 +60,13 @@ export default function Header({ locale, translations }: { locale: Locale; trans
             </a>
           </div>
 
-          {/* Mobile: Language & Menu */}
+          {/* Mobile: Language, Client Area & Menu */}
           <div className="md:hidden flex items-center space-x-2 flex-shrink-0">
             <LanguageSelector currentLocale={locale} />
+            <ClientArea locale={locale} translations={translations} inline={true} />
             <button
               type="button"
-              className="p-2.5 rounded-md text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] w-[44px] h-[44px] flex items-center justify-center border border-gray-300 bg-white shadow-sm"
+              className="p-2.5 rounded-lg text-gray-700 hover:bg-gray-100 active:bg-gray-200 min-w-[44px] min-h-[44px] w-[44px] h-[44px] flex items-center justify-center border border-gray-200 bg-white"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
               aria-expanded={isOpen}
