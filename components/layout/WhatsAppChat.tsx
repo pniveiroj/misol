@@ -2,10 +2,58 @@
 
 import { useState } from 'react'
 import { MessageCircle, X, Send } from 'lucide-react'
+import type { Locale } from '@/lib/i18n'
+import type { Translations } from '@/lib/get-translations'
 
-export default function WhatsAppChat() {
+interface WhatsAppChatProps {
+  locale: Locale
+  translations: Translations
+}
+
+export default function WhatsAppChat({ locale, translations }: WhatsAppChatProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [message, setMessage] = useState('')
+
+  const whatsappTexts = {
+    es: {
+      openChat: 'Abrir chat de WhatsApp',
+      needHelp: '¿Necesitas ayuda?',
+      whatsapp: 'WhatsApp',
+      onlineSupport: 'Soporte en línea',
+      closeChat: 'Cerrar chat',
+      greeting: '¡Hola! 👋 ¿En qué podemos ayudarte?',
+      description: 'Estamos aquí para resolver tus dudas sobre nuestros servicios de transporte.',
+      placeholder: 'Escribe tu mensaje...',
+      sendMessage: 'Enviar mensaje',
+      autoResponse: 'Respuesta automática • Normalmente respondemos en minutos',
+    },
+    val: {
+      openChat: 'Obrir xat de WhatsApp',
+      needHelp: 'Necessites ajuda?',
+      whatsapp: 'WhatsApp',
+      onlineSupport: 'Suport en línia',
+      closeChat: 'Tancar xat',
+      greeting: 'Hola! 👋 En què podem ajudar-te?',
+      description: 'Estem aquí per resoldre els teus dubtes sobre els nostres serveis de transport.',
+      placeholder: 'Escriu el teu missatge...',
+      sendMessage: 'Enviar missatge',
+      autoResponse: 'Resposta automàtica • Normalment responem en minuts',
+    },
+    en: {
+      openChat: 'Open WhatsApp chat',
+      needHelp: 'Need help?',
+      whatsapp: 'WhatsApp',
+      onlineSupport: 'Online support',
+      closeChat: 'Close chat',
+      greeting: 'Hello! 👋 How can we help you?',
+      description: 'We are here to answer your questions about our transport services.',
+      placeholder: 'Type your message...',
+      sendMessage: 'Send message',
+      autoResponse: 'Automatic response • We usually respond within minutes',
+    },
+  }
+
+  const texts = whatsappTexts[locale]
 
   const handleSend = () => {
     if (message.trim()) {
@@ -20,12 +68,12 @@ export default function WhatsAppChat() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1DA851] text-white rounded-full p-4 sm:p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center group min-w-[56px] min-h-[56px]"
-        aria-label="Abrir chat de WhatsApp"
+        aria-label={texts.openChat}
       >
         <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
         {!isOpen && (
           <span className="hidden sm:block absolute right-full mr-3 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap">
-            ¿Necesitas ayuda?
+            {texts.needHelp}
           </span>
         )}
       </button>
@@ -40,14 +88,14 @@ export default function WhatsAppChat() {
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-semibold">WhatsApp</h3>
-                  <p className="text-xs text-white/90">Soporte en línea</p>
+                  <h3 className="font-semibold">{texts.whatsapp}</h3>
+                  <p className="text-xs text-white/90">{texts.onlineSupport}</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
                 className="hover:bg-white/20 rounded-full p-1 transition-colors"
-                aria-label="Cerrar chat"
+                aria-label={texts.closeChat}
               >
                 <X className="w-5 h-5" />
               </button>
@@ -59,14 +107,14 @@ export default function WhatsAppChat() {
                 <div className="flex justify-start">
                   <div className="bg-white rounded-lg p-3 shadow-sm max-w-[80%]">
                     <p className="text-sm text-gray-700">
-                      ¡Hola! 👋 ¿En qué podemos ayudarte?
+                      {texts.greeting}
                     </p>
                   </div>
                 </div>
                 <div className="flex justify-start">
                   <div className="bg-white rounded-lg p-3 shadow-sm max-w-[80%]">
                     <p className="text-sm text-gray-700">
-                      Estamos aquí para resolver tus dudas sobre nuestros servicios de transporte.
+                      {texts.description}
                     </p>
                   </div>
                 </div>
@@ -81,19 +129,19 @@ export default function WhatsAppChat() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-                  placeholder="Escribe tu mensaje..."
+                  placeholder={texts.placeholder}
                   className="flex-1 px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:border-transparent text-base sm:text-sm min-h-[44px]"
                 />
                 <button
                   onClick={handleSend}
                   className="bg-[#25D366] hover:bg-[#20BA5A] active:bg-[#1DA851] text-white p-3 sm:p-2 rounded-lg transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
-                  aria-label="Enviar mensaje"
+                  aria-label={texts.sendMessage}
                 >
                   <Send className="w-5 h-5" />
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-2 text-center">
-                Respuesta automática • Normalmente respondemos en minutos
+                {texts.autoResponse}
               </p>
             </div>
           </div>

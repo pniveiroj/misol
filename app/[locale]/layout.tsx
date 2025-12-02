@@ -81,7 +81,7 @@ export default async function RootLayout({
           {children}
         </main>
         <Footer locale={locale} translations={translations} />
-        <WhatsAppChat />
+        <WhatsAppChat locale={locale} translations={translations} />
       </body>
     </html>
   )
