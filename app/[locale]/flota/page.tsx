@@ -56,7 +56,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/jpg/5.jpg"
+            src="/images/jpg/header5.jpg"
             alt="Flota de autobuses"
             fill
             className="object-cover object-center"

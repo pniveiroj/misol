@@ -71,7 +71,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/jpg/4.jpg"
+            src="/images/jpg/header3.jpg"
             alt="Servicios"
             fill
             className="object-cover object-center"

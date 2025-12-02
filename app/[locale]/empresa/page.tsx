@@ -43,7 +43,7 @@ export default async function EmpresaPage({ params }: { params: Promise<{ locale
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/jpg/2.jpg"
+            src="/images/jpg/header2.jpg"
             alt="Nuestra empresa"
             fill
             className="object-cover object-center"

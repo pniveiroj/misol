@@ -13,7 +13,7 @@ export default function Hero({ translations, locale }: { translations: Translati
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/jpg/1.jpg"
+          src="/images/jpg/header1.jpg"
           alt="Autocares Mi-Sol"
           fill
           className="object-cover object-center"

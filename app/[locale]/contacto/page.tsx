@@ -27,7 +27,7 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/jpg/9.jpg"
+            src="/images/jpg/header6.jpg"
             alt="Contacto"
             fill
             className="object-cover object-center"
