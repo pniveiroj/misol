@@ -24,7 +24,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
         t.services.companies.item3,
         t.services.companies.item4,
       ],
-      image: '/images/jpg/1.jpg',
+      image: '/images/jpg/empresas.jpg',
     },
     {
       icon: Users,
@@ -61,7 +61,7 @@ export default async function ServiciosPage({ params }: { params: Promise<{ loca
         t.services.events.item5,
         t.services.events.item6,
       ],
-      image: '/images/jpg/3.jpg',
+      image: '/images/jpg/eventos.jpg',
     },
   ]
 

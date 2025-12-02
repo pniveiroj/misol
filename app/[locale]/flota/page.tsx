@@ -25,7 +25,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
   const fleetVehicles = [
     {
       capacity: '35-45',
-      image: '/images/jpg/6.jpg',
+      image: '/images/jpg/35-45.jpg',
       features: [
         localeParam === 'es' ? 'Ideal para grupos pequeños' : localeParam === 'val' ? 'Ideal per a grups petits' : 'Ideal for small groups',
         localeParam === 'es' ? 'Máxima comodidad' : localeParam === 'val' ? 'Màxima comoditat' : 'Maximum comfort',
@@ -33,7 +33,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
     },
     {
       capacity: '50-55',
-      image: '/images/jpg/7.jpg',
+      image: '/images/jpg/50-55.jpeg',
       features: [
         localeParam === 'es' ? 'Perfecto para excursiones' : localeParam === 'val' ? 'Perfecte per a excursions' : 'Perfect for excursions',
         localeParam === 'es' ? 'Equipamiento completo' : localeParam === 'val' ? 'Equipament complet' : 'Full equipment',
@@ -41,7 +41,7 @@ export default async function FlotaPage({ params }: { params: Promise<{ locale: 
     },
     {
       capacity: '60-63',
-      image: '/images/jpg/8.jpg',
+      image: '/images/jpg/60-63.jpg',
       features: [
         localeParam === 'es' ? 'Gran capacidad' : localeParam === 'val' ? 'Gran capacitat' : 'Large capacity',
         localeParam === 'es' ? 'Larga distancia' : localeParam === 'val' ? 'Llarga distància' : 'Long distance',
