@@ -97,3 +97,4 @@ Una vez que el servidor esté funcionando, podrás:
 - npm está instalado: `npm --version`
 - Estás en la carpeta correcta del proyecto
 
+

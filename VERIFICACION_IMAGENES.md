@@ -85,3 +85,4 @@
 
 ## ✅ Estado: Todas las imágenes están correctamente configuradas
 
+

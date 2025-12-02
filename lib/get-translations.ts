@@ -15,3 +15,4 @@ export function getTranslations(locale: Locale) {
 
 export type Translations = typeof es
 
+

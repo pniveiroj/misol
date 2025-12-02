@@ -65,3 +65,4 @@ Todas las imágenes deberían pesar menos de **500 KB** (0.5 MB) para una carga 
 - Next.js optimiza automáticamente las imágenes en producción
 - Los formatos AVIF y WebP se generan automáticamente para mejor compresión
 
+
