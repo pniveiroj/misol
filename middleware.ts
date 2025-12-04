@@ -5,6 +5,11 @@ import { locales, defaultLocale, isValidLocale } from './lib/i18n'
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
+  // Permitir rutas de admin sin redirección de locale
+  if (pathname.startsWith('/admin') || pathname.startsWith('/api')) {
+    return NextResponse.next()
+  }
+
   // Verificar si el pathname ya tiene un locale
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -35,10 +40,12 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     // Match all pathnames except for
-    // - … if they start with `/api`, `/_next` or `/_vercel`
+    // - … if they start with `/_next` or `/_vercel`
     // - … the ones containing a dot (e.g. `favicon.ico`)
-    '/((?!api|_next|_vercel|.*\\..*).*)',
+    '/((?!_next|_vercel|.*\\..*).*)',
   ],
 }
+
+
 
 

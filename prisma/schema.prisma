@@ -1,0 +1,46 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  username  String   @unique
+  password  String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Translation {
+  id        String   @id @default(cuid())
+  key       String   // ej: "home.title", "nav.home"
+  locale    String   // "es", "val", "en"
+  value     String   // El texto traducido
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([key, locale])
+  @@index([locale])
+}
+
+model Image {
+  id          String   @id @default(cuid())
+  filename    String
+  path        String   // Ruta relativa: "/images/jpg/header1.jpg"
+  alt         String?  // Texto alternativo
+  category    String?  // "header", "fleet", "gallery", etc.
+  order       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+}
+
